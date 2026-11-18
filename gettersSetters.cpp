@@ -1,9 +1,12 @@
 #include <iostream>
+#include<string>
 using namespace std;
 
 class Student{
     string name;
     float cgpa;
+
+public:
 
     void setName(string nameValue){
         name= nameValue;
@@ -13,28 +16,25 @@ class Student{
         cgpa= cgpaValue;
     }
 
-    void getName(){
+    string getName(){
         return name;
     }
 
-    void getCgpa(){
+    float getCgpa(){
         return cgpa;
     }
 
-      void getPercentage(){
-        cout<<(cgpa*10)<<'%'<<endl;
-
-      }
 };
 
 int main(){
     Student s1;
-    s1.cgpa = 9;
-    s1.name= "Anu";
-    cout<<s1.name<<endl;
-    cout<< s1.cgpa<<endl;
+    s1.setName("Sanskar");
+    s1.setCgpa(9.4);
 
-    s1.getPercentage();
+    cout<<s1.getName()<<endl;
+    cout<<s1.getCgpa()<<endl;
+
+    
 
     return 0;
 }
