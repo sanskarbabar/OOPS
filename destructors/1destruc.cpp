@@ -29,6 +29,10 @@ class Car{
     // Destructor 
     ~Car(){
         cout<<"object is destructing..."<<endl;
+        if(mileage != NULL){
+            delete mileage;
+            mileage= NULL;  // heap also now got freed(heap empty hogaya)
+        }
 
     }
 };
