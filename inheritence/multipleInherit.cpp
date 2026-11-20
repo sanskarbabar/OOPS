@@ -9,22 +9,26 @@ class Teacher{
 };
 
 class Student{
+    public:
     int rollno;
     float cgpa;
 
 };
 
-class TA: public
+class TA: public Teacher, public Student{
+    public:
+    string name;
+
+};
 
 int main(){
-    Dog d1;
-    d1.color= "blue";
+    TA t1;
 
-    d1.eats();
-    d1.breathes();
-    
-    cout<<d1.bloodType<<endl;
-    d1.tailWags();
+    t1.name= "beta";
+    t1.rollno= 24;
+
+    cout<<t1.name<<endl;
+    cout<<t1.rollno<<endl;
  
     return 0;
 }
