@@ -2,16 +2,20 @@
 #include<string>
 using namespace std;
 
-void counter(){
-    static int count = 0;  //static varaible
-    count++;
-    cout<< count<<endl;
-}
+class Example{
+public:
+    static int x;
+    
+};
 
+int Example::x=0;  // initialisation
 
 int main(){
-    counter(); //1
-    counter();  // 2
-    counter();  //3
+    Example e1;
+    Example e2;
+    Example e3;
+    
+    cout<<e1.x++<<endl;
+    cout<<e2.x<<endl;
     return 0;
 }
